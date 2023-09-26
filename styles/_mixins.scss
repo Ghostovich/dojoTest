@@ -1,0 +1,19 @@
+@mixin container {
+  padding-left: calc(50% - $widthSite / 2);
+  padding-right: calc(50% - $widthSite / 2);
+}
+
+%siteFont {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+%siteFlex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center 
+}

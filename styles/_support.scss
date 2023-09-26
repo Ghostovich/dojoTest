@@ -1,0 +1,60 @@
+.support {
+  padding-top: 52px;
+  @extend %siteFlex;
+  flex-direction: column;
+  background: #121920;
+  &__blocks {
+    gap: 30px;    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+  }
+  &__block {
+    margin-top: 33px;
+    @extend %siteFlex;
+    flex-direction: column;
+    width: 240px;
+    height: 380px;
+    align-items: flex-start;
+    gap: 24px;
+    padding-left: 24px;
+    border-radius: 5px;
+    border: 1px solid #1b242d;
+    background: #121920;
+    justify-content: start;
+    padding-top: 34px;
+    margin-bottom: 21px;
+    transition: 0.3s;
+    &:hover{
+      background: $colorHover; 
+    }
+    &:hover path{
+    fill: black;
+    }
+    &:hover .service__block__heading{
+      color: black;
+    }
+    &:hover .service__block__text{
+      color: black;
+    }
+    &__head {
+      padding-top: 75px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-size: 38px;
+      font-weight: 300;
+    }
+    &__heading {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    &__text {
+      color: #88939e;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}

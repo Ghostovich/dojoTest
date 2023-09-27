@@ -23,9 +23,20 @@
     font-size: 22px;
     font-weight: 300;
     color: #61666b;
-
   }
   &__phone path {
     fill: #61666b;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    &__top {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__phone {
+      font-size: 16px;
+    }
   }
 }

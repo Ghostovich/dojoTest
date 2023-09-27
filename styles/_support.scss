@@ -109,4 +109,15 @@
 }
 
 @media(max-width:425px){
+  .support{
+    &__blocks{
+      grid-template-columns: 240px;
+    }
+    &__block{
+      &__head{
+        font-style: 30px;
+        text-align: center;
+      }
+    }
+  }
 }

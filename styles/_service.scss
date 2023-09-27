@@ -75,4 +75,20 @@
 }
 
 @media(max-width:425px){
+  .service{
+    &__blocks{
+      grid-template-columns: 240px;
+      gap: 10px;
+      
+    }
+    &__block{
+      height: 280px; 
+      padding-top: 24px;
+      gap: 10px;
+      &__head{
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+  }
 }

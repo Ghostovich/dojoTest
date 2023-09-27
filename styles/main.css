@@ -4,7 +4,7 @@
   line-height: normal;
 }
 
-.support__block, .support, .privilege__planing__input__block, .privilege__planing__form, .privilege__planing, .privilege__parking__description, .privilege__parking__cart, .privilege__parking, .privilege__content, .service__block, .service__blocks, .service, .header__form__confirm, .header__form, .header__content, .header__main, .header__phone, .header__top {
+.footer__phone, .footer__top, .stay__client__form__confirm, .stay__client__form, .step__description__block, .how__stay__promocod, .how__stay, .how__step, .how__steps, .how, .support__block__text__mail, .support__block__text__phone, .support__block, .support, .privilege__planing__input__block, .privilege__planing__form, .privilege__planing, .privilege__parking__description, .privilege__parking__cart, .privilege__parking, .privilege__content, .service__block, .service__blocks, .service, .header__form__confirm, .header__form, .header__content, .header__main, .header__phone, .header__top {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -188,6 +188,23 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 1024px) {
+  .header__bg::after {
+    top: 860px;
+  }
+  .header__main {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .header__content {
+    padding-top: 0px;
+  }
+  .header__form {
+    z-index: 3;
+    margin-bottom: 30px;
+  }
+}
 .service {
   padding-top: 75px;
   flex-direction: column;
@@ -246,6 +263,17 @@
   line-height: 20px;
 }
 
+@media (max-width: 1024px) {
+  .service__blocks {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    margin-top: 33px;
+  }
+  .service__block {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 .privilege {
   background: url(/img/bg_privilege.png);
   background-position: center;
@@ -257,7 +285,7 @@
   position: absolute;
   z-index: 2;
   background: linear-gradient(180deg, rgba(18, 25, 32, 0.95) 0%, rgba(18, 25, 32, 0) 100%);
-  width: 1440px;
+  width: 100%;
   height: 184px;
 }
 .privilege__content {
@@ -374,64 +402,309 @@
   color: black;
 }
 
+@media (max-width: 1024px) {
+  .privilege__parking {
+    flex-direction: column;
+  }
+  .privilege__parking__description {
+    height: 140px;
+  }
+  .privilege__planing {
+    margin-bottom: 40px;
+  }
+  .privilege__planing__form {
+    flex-direction: column;
+  }
+}
 .support {
   padding-top: 52px;
   flex-direction: column;
   background: #121920;
 }
 .support__blocks {
+  margin-top: 33px;
   gap: 30px;
   display: grid;
   grid-template-columns: 240px 240px 240px 240px;
+  margin-bottom: 29px;
 }
 .support__block {
-  margin-top: 33px;
   flex-direction: column;
-  width: 240px;
-  height: 380px;
-  align-items: flex-start;
-  gap: 24px;
-  padding-left: 24px;
-  border-radius: 5px;
-  border: 1px solid #1b242d;
-  background: #121920;
-  justify-content: start;
-  padding-top: 34px;
-  margin-bottom: 21px;
+  justify-content: space-between;
+  border-radius: 5px 5px 0px 0px;
+  background: #fff;
+  height: 400px;
+  padding-bottom: 27px;
   transition: 0.3s;
 }
 .support__block:hover {
-  background: #F8BE4D;
+  opacity: 0.7;
 }
 .support__block:hover path {
-  fill: black;
+  opacity: 0.7;
 }
 .support__block:hover .service__block__heading {
-  color: black;
+  opacity: 0.7;
 }
 .support__block:hover .service__block__text {
-  color: black;
+  opacity: 0.7;
 }
 .support__block__head {
-  padding-top: 75px;
-  padding-top: 9px;
+  padding-top: 61px;
   padding-bottom: 9px;
   font-size: 38px;
   font-weight: 300;
 }
+.support__block__img {
+  height: 208px;
+  display: flex;
+  overflow: hidden;
+}
 .support__block__heading {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
+  color: #1b242d;
 }
 .support__block__text {
   color: #88939e;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  width: 196px;
+  text-align: center;
+}
+.support__block__text__phone {
+  gap: 10px;
+}
+.support__block__text__mail {
+  gap: 10px;
+}
+.support__block__contacts {
+  color: #121920;
+  font-size: 13px;
   font-weight: 400;
   line-height: 20px;
+  text-align: left;
+}
+.support__img {
+  height: 100%;
+}
+.support__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.fedotova {
+  transform: scale(1.4);
+  position: absolute;
+  top: 40px;
+}
+.fedotova__block {
+  position: relative;
+  width: 160px;
+}
+
+@media (max-width: 1024px) {
+  .support__blocks {
+    grid-template-columns: 240px 240px;
+  }
+  .support__block__head {
+    padding-top: 0;
+  }
+}
+.how {
+  background: url(/img/bg_privilege.png);
+  flex-direction: column;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+.how__heading {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin-top: 77px;
+  margin-bottom: 69px;
+  font-size: 38px;
+  font-weight: 300;
+}
+.how__step {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 75px;
+}
+.how__stay {
+  margin-bottom: 96px;
+  gap: 91px;
+}
+.how__stay__promocod {
+  flex-direction: column;
+  gap: 51px;
+  align-items: flex-start;
+}
+.how__stay__promocod__text {
+  color: #88939e;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 449px;
+  height: 50px;
+}
+.how__stay__promocod__text__span1 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.how__stay__promocod__text__span2 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.how__stay__form__head {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 48px;
+}
+.how__stay__form__text {
+  color: #88939e;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 19px;
+}
+.how__stay__form__text__block {
+  display: flex;
+  width: 400px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.how__stay__form__text__border {
+  height: 44px;
+  width: 2px;
+  border-left: 2px solid #F8BE4D;
+}
+
+.step__numer {
+  color: #232a32;
+  font-size: 100px;
+  font-weight: 900;
+  padding-bottom: 35px;
+}
+.step__line {
+  border-bottom: 2px solid #F8BE4D;
+  width: 36px;
+  margin-bottom: 35px;
+}
+.step__description__block {
+  gap: 32px;
+  width: 337px;
+  height: 103px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.stay__client__form {
+  flex-direction: column;
+  position: relative;
+  width: 330px;
+  height: 279px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 17px;
+  font-weight: 700;
+}
+.stay__client__form__heading {
+  padding-bottom: 39px;
+}
+.stay__client__form__confirm {
+  flex-direction: column;
+}
+.stay__client__form__input {
+  width: 278px;
+  height: 50px;
+  border-radius: 5px;
+  background: #3a434c;
+  font-size: 15px;
+  font-weight: 400;
+  color: #88939e;
+  padding-left: 19px;
+  margin-bottom: 18px;
+  transition: 0.3s;
+}
+.stay__client__form__input:hover {
+  opacity: 0.7;
+}
+.stay__client__form__button {
+  position: absolute;
+  top: 245px;
+  width: 278px;
+  height: 60px;
+  border-radius: 5px;
+  background: #F8BE4D;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.stay__client__form__button:hover {
+  background: none;
+  color: #FFF;
+  border-color: #F8BE4D;
+}
+
+@media (max-width: 1024px) {
+  .how__heading {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .how__steps {
+    flex-direction: column;
+  }
+  .how__step {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  .how__stay {
+    flex-direction: column;
+    gap: 45px;
+  }
+  .step__line {
+    margin-top: 50px;
+    transform: rotate(90deg);
+  }
+  .step__numer {
+    font-size: 80px;
+  }
+}
+.footer__top {
+  background: black;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.footer__logo {
+  z-index: 2;
+  transition: 0.3s;
+}
+.footer__logo:hover {
+  opacity: 0.7;
+}
+.footer__logo path {
+  fill: #61666b;
+}
+.footer__phone {
+  z-index: 2;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #61666b;
+}
+.footer__phone path {
+  fill: #61666b;
 }
 
 * {

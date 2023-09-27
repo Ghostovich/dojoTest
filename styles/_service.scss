@@ -58,3 +58,21 @@
     }
   }
 }
+
+@media(max-width:1024px){
+  .service{
+    &__blocks{
+      display: grid;
+      grid-template-columns: 240px 240px;
+      margin-top: 33px;
+      
+    }
+    &__block{
+      margin-top: 0;
+      margin-bottom: 0; 
+    }
+  }
+}
+
+@media(max-width:425px){
+}

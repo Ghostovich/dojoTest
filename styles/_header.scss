@@ -190,3 +190,26 @@
 .up {
   text-transform: uppercase;
 }
+
+@media(max-width:1024px){
+  .header{
+    &__bg::after{
+      top:860px;
+    }
+    &__main{
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+    }
+    &__content{
+      padding-top: 0px;
+    }
+    &__form{
+      z-index: 3;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media(max-width:425px){
+}

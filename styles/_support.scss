@@ -4,57 +4,109 @@
   flex-direction: column;
   background: #121920;
   &__blocks {
-    gap: 30px;    display: grid;
+    margin-top: 33px;
+    gap: 30px;
+    display: grid;
     grid-template-columns: 240px 240px 240px 240px;
+    margin-bottom: 29px;
   }
   &__block {
-    margin-top: 33px;
     @extend %siteFlex;
     flex-direction: column;
-    width: 240px;
-    height: 380px;
-    align-items: flex-start;
-    gap: 24px;
-    padding-left: 24px;
-    border-radius: 5px;
-    border: 1px solid #1b242d;
-    background: #121920;
-    justify-content: start;
-    padding-top: 34px;
-    margin-bottom: 21px;
+    justify-content: space-between;
+    border-radius: 5px 5px 0px 0px;
+    background: #fff;
+    height: 400px;
+    padding-bottom: 27px;
+
     transition: 0.3s;
-    &:hover{
-      background: $colorHover; 
+    &:hover {
+      opacity: 0.7;
     }
-    &:hover path{
-    fill: black;
+    &:hover path {
+      opacity: 0.7;
     }
-    &:hover .service__block__heading{
-      color: black;
+    &:hover .service__block__heading {
+      opacity: 0.7;
     }
-    &:hover .service__block__text{
-      color: black;
+    &:hover .service__block__text {
+      opacity: 0.7;
     }
     &__head {
-      padding-top: 75px;
-      padding-top: 9px;
+      padding-top: 61px;
       padding-bottom: 9px;
       font-size: 38px;
       font-weight: 300;
     }
+    &__img {
+      height: 208px;
+      display: flex;
+      overflow: hidden;
+    }
     &__heading {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 24px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 24px;
+      color: #1b242d;
     }
     &__text {
       color: #88939e;
-      font-size: 15px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      width: 196px;
+      text-align: center;
+      &__phone {
+        @extend %siteFlex;
+        gap: 10px;
+      }
+      &__mail {
+        @extend %siteFlex;
+        gap: 10px;
+      }
+    }
+    &__contacts {
+      color: #121920;
+      font-size: 13px;
       font-weight: 400;
       line-height: 20px;
+      text-align: left;
     }
   }
+  &__img {
+    height: 100%;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+.fedotova {
+  transform: scale(1.4);
+  position: absolute;
+  top: 40px;
+  &__block {
+    position: relative;
+    width: 160px;
+  }
+}
+
+
+@media(max-width:1024px){
+  .support{
+    &__blocks{
+      grid-template-columns: 240px 240px;
+    }
+    &__block{
+      &__head{
+        padding-top: 0; 
+      }
+    }
+  }
+}
+
+@media(max-width:425px){
 }
